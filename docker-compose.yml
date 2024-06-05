@@ -11,7 +11,7 @@ services:
       MYSQL_USER: canopeum_user
       MYSQL_PASSWORD: CanopeumUser12345!@
     ports:
-      - 5002:3306
+      - 6002:3306
     volumes:
       - mysql8-data:/var/lib/mysql
     # networks:
@@ -26,7 +26,7 @@ services:
     hostname: backend
     image: ghcr.io/beslogic/canopeum_backend:latest
     ports:
-      - 5001:5001
+      - 6001:5001
     depends_on:
       - mysql
     environment:
