@@ -50,7 +50,7 @@ services:
     environment:
       VIRTUAL_HOST: releaftrees.life
     networks:
-      - nginx-canopeum
+      # - nginx-canopeum
       # - local-canopeum
 
 volumes:
