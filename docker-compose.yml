@@ -13,7 +13,8 @@ services:
       - 6002:3306
     volumes:
       - mysql8-data:/var/lib/mysql
-    # networks:
+    networks:
+      - bleh
     #   - nginx-canopeum
       # - internal-canopeum
       # local-canopeum:
@@ -37,7 +38,7 @@ services:
       VIRTUAL_HOST: api.canopeum.releaftrees.life
     networks:
       # - internal-canopeum
-      - nginx-canopeum
+      - bleh
       # - local-canopeum
 
   frontend:
@@ -56,7 +57,7 @@ volumes:
   mysql8-data:
 
 networks:
-  nginx-canopeum:
+  bleh:
     external: true
   # internal-canopeum:
   #   external: true
